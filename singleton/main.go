@@ -46,6 +46,7 @@ func (f *fruit) GetName() string {
 }
 
 func main() {
+	//in the main thread connectionManager will create once time.
 	cm := NewConnectionManager("apple")
 	fmt.Println(cm.GetAddress())
 
@@ -53,7 +54,7 @@ func main() {
 	cm = NewConnectionManager("banana")
 	fmt.Println(cm.GetAddress())
 
-	// when import a package the fruit object will be set up , everyone can not revise it anymore in runtime.
+	// when import a package the fruit object will be set up at init function  , everyone can not revise it anymore in runtime.
 	f := GetFruit()
 	fmt.Println(f.GetName())
 }
