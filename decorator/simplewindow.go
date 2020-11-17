@@ -1,7 +1,7 @@
 package main
 
+type SimpleWindow struct{}
 
-type SimpleWindow struct {}
 func (window *SimpleWindow) Draw() {
 	//draw a simple window
 }
